@@ -25,7 +25,7 @@ const Nav = () => {
 	return (
 		<nav className='nav'>
 			{/* Desktop Nav */}
-			<div className='sm:flex hidden'>
+			<div className='md:flex hidden'>
 				<div className='flex gap-5 flex-wrap'>
 					<Link href='/' className='nav_link'>
 						Home
@@ -39,12 +39,12 @@ const Nav = () => {
 			</div>
 			{/* Mobile Nav */}
 
-			<div className='sm:hidden flex'>
+			<div className='md:hidden flex'>
 				<span
 					className='nav_link cursor-pointer'
 					onClick={() => setToggleDropdown((prev) => !prev)}
 				>
-					Menu
+					Categories
 					{toggleDropdown && (
 						<div className='dropdown'>
 							<Link href='/' className='dropdown_link'>

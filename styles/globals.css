@@ -24,3 +24,11 @@
 .dropdown_link {
   @apply text-sm font-roboto text-gray-700 hover:text-gray-500 font-medium uppercase;
 }
+
+/* header */
+.header {
+  @apply w-full flex p-5 justify-around gap-5 flex-wrap mb-10 items-center border-b-4 border-yellow-300 shadow-lg
+}
+.search {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 font-roboto pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}

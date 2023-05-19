@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const connectToDB = async () => {
+export const connectToDB = async () => {
 	try {
 		if (mongoose.connection.readyState === 1) {
 			console.log('MongoDB is already connected');
@@ -8,7 +8,7 @@ const connectToDB = async () => {
 		}
 
 		await mongoose.connect(process.env.MONGO_URI, {
-			dbName: 'javascript.ba',
+			dbName: 'javascriptBA',
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
@@ -18,5 +18,3 @@ const connectToDB = async () => {
 		console.error('MongoDB connection error:', error);
 	}
 };
-
-export default connectToDB;

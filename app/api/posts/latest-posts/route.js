@@ -10,6 +10,7 @@ export const GET = async () => {
 
 		return new Response(JSON.stringify(posts), { status: 200 });
 	} catch (error) {
+		console.log(error);
 		return new Response('Failed to fetch posts', { status: 500 });
 	}
 };

@@ -1,7 +1,7 @@
 import { Schema, model, models } from 'mongoose';
 
 const PostSchema = new Schema({
-	author: { type: Schema.Types.ObjectId, ref: 'Author' },
+	creator: { type: Schema.Types.ObjectId, ref: 'Author' },
 	technology: { type: String, required: [true, 'Post must have a technology'] },
 	category: { type: String, required: [true, 'Post must have a category'] },
 	heading: { type: String, required: [true, 'Post must have a heading'] },
@@ -12,6 +12,6 @@ const PostSchema = new Schema({
 	views: { type: Number },
 });
 
-const Post = models.Posts || model('Posts', PostSchema);
+const Post = models.Post || model('Post', PostSchema);
 
 export default Post;

@@ -17,7 +17,7 @@ const Home = () => {
 	}, []);
 
 	return (
-		<section className='w-full flex-center flex-col'>
+		<section className='w-full flex-1 flex-center flex-col'>
 			<div className='w-full flex flex-row flex-wrap gap-5 p-10'>
 				{latestPosts.map((post) => (
 					<PostCard key={post._id} post={post} />

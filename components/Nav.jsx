@@ -44,7 +44,7 @@ const Nav = () => {
 					className='nav_link cursor-pointer'
 					onClick={() => setToggleDropdown((prev) => !prev)}
 				>
-					Categories
+					Menu
 					{toggleDropdown && (
 						<div className='dropdown'>
 							<Link href='/' className='dropdown_link'>

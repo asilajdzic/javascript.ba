@@ -5,13 +5,13 @@ import { useParams } from 'next/navigation';
 
 import PostCard from '@components/PostCard';
 
-const Technology = () => {
+const Category = () => {
 	const params = useParams();
 	const [filteredPosts, setFilteredPosts] = useState([]);
 
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const response = await fetch(`/api/technologies/${params.name}`);
+			const response = await fetch(`/api/categories/${params.name}`);
 			const data = await response.json();
 			setFilteredPosts(data);
 		};
@@ -28,4 +28,4 @@ const Technology = () => {
 	);
 };
 
-export default Technology;
+export default Category;

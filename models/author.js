@@ -26,6 +26,6 @@ const AuthorSchema = new Schema({
 	},
 });
 
-const Author = models.Authors || model('Authors', AuthorSchema);
+const Author = models.Author || model('Author', AuthorSchema);
 
 export default Author;

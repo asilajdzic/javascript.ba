@@ -6,16 +6,16 @@ const PostCard = ({ post }) => {
 	return (
 		<div
 			onClick={() => router.push(`/posts/${post._id}`)}
-			className='min-w-[120px] max-w-[220px]  flex flex-col items-center overflow-hidden cursor-pointer'
+			className='min-w-[100px] max-w-[200px]  flex flex-col items-center overflow-hidden cursor-pointer'
 		>
 			<Image
 				src={post.imageUrl}
-				width={150}
-				height={150}
+				width={120}
+				height={120}
 				alt='post image'
 				className='transition-transform duration-700 transform hover:scale-110'
 			/>
-			<h3 className='font-roboto font-semibold mt-3 text-gray-900 text-justify'>
+			<h3 className='font-roboto font-semibold mt-3 text-gray-900 text-center'>
 				{post.heading}
 			</h3>
 		</div>

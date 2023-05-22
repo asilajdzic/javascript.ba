@@ -19,6 +19,19 @@ const Post = () => {
 
 		fetchPost();
 	}, [params.id]);
+
+	useEffect(() => {
+		const addHomepageVisit = async () => {
+			await fetch('/api/analytics', {
+				method: 'PATCH',
+				body: JSON.stringify({
+					name: 'posts_visits',
+				}),
+			});
+		};
+		addHomepageVisit();
+	}, []);
+
 	return <PostPreview post={post} />;
 };
 

@@ -13,6 +13,7 @@ export const POST = async (req) => {
 		tags,
 		createdAt,
 		views,
+		source_link,
 	} = await req.json();
 	try {
 		await connectToDB();
@@ -27,6 +28,7 @@ export const POST = async (req) => {
 			tags,
 			createdAt,
 			views,
+			source_link,
 		});
 		await newPost.save();
 		return new Response(JSON.stringify(newPost), { status: 201 });

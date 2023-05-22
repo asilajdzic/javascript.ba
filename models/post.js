@@ -10,6 +10,10 @@ const PostSchema = new Schema({
 	tags: { type: [String], required: [true, 'Post must have at least one tag'] },
 	createdAt: { type: Date },
 	views: { type: Number },
+	source_link: {
+		type: String,
+		required: [true, 'Post must have a source link'],
+	},
 });
 
 const Post = models.Post || model('Post', PostSchema);

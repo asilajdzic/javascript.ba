@@ -12,7 +12,7 @@ const nextConfig = {
 		return config;
 	},
 	images: {
-		domains: ['cdn-icons-png.flaticon.com', 'i.ibb.co'],
+		domains: ['i.ibb.co'],
 	},
 };
 

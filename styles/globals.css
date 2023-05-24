@@ -54,3 +54,7 @@
 	@apply absolute top-0 left-1/2 transform -translate-x-1/2 h-px w-4/5 bg-zinc-500;
 	margin-top: 3.5rem;
 }
+
+.quiz_button {
+	@apply bg-js_black hover:bg-js_yellow text-white font-semibold py-2 px-4 rounded-lg mx-2;
+}

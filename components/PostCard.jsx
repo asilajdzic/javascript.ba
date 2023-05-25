@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
 	return (
 		<div
 			onClick={() => router.push(`/posts/${post._id}`)}
-			className='min-w-[100px] max-w-[200px]  flex flex-col items-center overflow-hidden cursor-pointer'
+			className='min-w-[100px] max-w-[200px] hover:shadow-inner flex flex-col items-center overflow-hidden cursor-pointer'
 		>
 			<Image
 				src={post.imageUrl}

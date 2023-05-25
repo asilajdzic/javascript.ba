@@ -77,8 +77,8 @@ const QuizGame = () => {
 	};
 
 	return (
-		<div className='flex-1 h-full flex flex-col items-center justify-center px-6 font-roboto'>
-			<div className='h-[40rem] w-[30rem] p-8 bg-white shadow-md rounded-lg flex flex-col justify-center'>
+		<section className='flex-1 h-full flex flex-col items-center justify-center px-6 mb-10 font-roboto'>
+			<div className='h-[40rem] w-[30rem] p-6 mb-10 bg-white shadow-xl hover:shadow-2xl rounded-lg flex flex-col justify-center'>
 				{difficulty && filteredQuestions.length > 0 && !showScore ? (
 					<div className='flex flex-col gap-6 text-center'>
 						<div className='text-gray-600'>
@@ -136,7 +136,7 @@ const QuizGame = () => {
 					</div>
 				)}
 			</div>
-		</div>
+		</section>
 	);
 };
 

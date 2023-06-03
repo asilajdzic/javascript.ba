@@ -78,7 +78,7 @@ const QuizGame = () => {
 
 	return (
 		<section className='flex-1 h-full flex flex-col items-center justify-center px-6 mb-10 font-roboto'>
-			<div className='h-[40rem] w-[30rem] p-6 mb-10 bg-white shadow-xl hover:shadow-2xl rounded-lg flex flex-col justify-center'>
+			<div className='h-[40rem] p-6 mb-10 bg-white shadow-xl hover:shadow-2xl rounded-lg flex flex-col justify-center'>
 				{difficulty && filteredQuestions.length > 0 && !showScore ? (
 					<div className='flex flex-col gap-6 text-center'>
 						<div className='text-gray-600'>

@@ -22,7 +22,7 @@ const Home = () => {
 	return (
 		<section className='w-full flex-1 flex-center flex-col p-2'>
 			<LatestPosts />
-			<div className='w-full flex my-4 flex-row gap-5 flex-wrap px-8 justify-between items-center'>
+			<div className='w-full flex my-4 gap-5 flex-col md:flex-row px-8 justify-between items-center'>
 				<QuizGame />
 				<MostViewedPosts />
 			</div>

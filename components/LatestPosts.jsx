@@ -18,9 +18,11 @@ const LatestPosts = () => {
 			<h1 className='font-roboto text-3xl font-semibold mt-3 text-gray-800 text-center'>
 				Latest Posts
 			</h1>
-			<div className='w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] shadow-md hover:shadow-xl p-10 justify-center items-center'>
+			<div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mx-auto shadow-md hover:shadow-xl p-10 justify-center items-center'>
 				{latestPosts.map((post) => (
-					<PostCard key={post._id} post={post} />
+					<div className='flex justify-center' key={post._id}>
+						<PostCard post={post} />
+					</div>
 				))}
 			</div>
 		</section>

@@ -7,7 +7,7 @@ const MostViewedPosts = () => {
 
 	useEffect(() => {
 		const fetchMostViewedPosts = async () => {
-			const timestamp = new Date().getTime(); // Generate a unique timestamp
+			const timestamp = new Date().getTime();
 			const response = await fetch(
 				`/api/posts/most-viewed-posts?cache=${timestamp}`
 			);

@@ -7,12 +7,16 @@ const MostViewedPosts = () => {
 
 	useEffect(() => {
 		const fetchMostViewedPosts = async () => {
-			const response = await fetch('/api/posts/most-viewed-posts');
+			const timestamp = new Date().getTime(); // Generate a unique timestamp
+			const response = await fetch(
+				`/api/posts/most-viewed-posts?cache=${timestamp}`
+			);
 			const data = await response.json();
 			setMostViewedPosts(data);
 		};
 		fetchMostViewedPosts();
 	}, []);
+
 	return (
 		<section className='max-w-[320px] flex mb-10 flex-col p-6 justify-center items-center shadow-2xl hover:shadow-3xl bg-opacity-75'>
 			<h1 className='font-roboto text-2xl font-semibold text-gray-700 text-center'>

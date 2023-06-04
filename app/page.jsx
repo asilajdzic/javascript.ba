@@ -6,6 +6,8 @@ import LatestPosts from '@components/LatestPosts';
 import MostViewedPosts from '@components/MostViewedPosts';
 import QuizGame from '@components/QuizGame';
 
+export const fetchCache = 'force-no-store';
+
 const Home = () => {
 	useEffect(() => {
 		const addHomepageVisit = async () => {

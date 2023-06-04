@@ -10,11 +10,11 @@ const PostPreview = ({ post }) => {
 	});
 
 	return (
-		<section className='w-full max-w-screen flex flex-col items-center my-8'>
-			<h1 className='font-roboto w-[30rem] text-gray-800 font-semibold text-xl text-center'>
+		<section className='w-full  flex flex-col items-center my-8'>
+			<h1 className='font-roboto sm:w-[30rem] text-gray-800 font-semibold text-xl text-center'>
 				{post.heading}
 			</h1>
-			<span className='w-[30rem] flex justify-between my-4'>
+			<span className='sm:w-[30rem] flex justify-between my-4'>
 				<p className='font-roboto text-gray-400 text-sm text-center'>
 					&#128198; {formattedDate}
 				</p>
@@ -26,7 +26,7 @@ const PostPreview = ({ post }) => {
 				<Image src={post.imageUrl} width={200} height={200} alt='post image' />
 			)}
 			<hr className='w-[60%] my-8 ' />
-			<p className='w-[30rem] font-roboto text-gray-500 text-base text-justify'>
+			<p className='sm:w-[30rem] font-roboto text-gray-500 text-base text-justify'>
 				{post.body}
 			</p>
 			<Link
@@ -37,12 +37,12 @@ const PostPreview = ({ post }) => {
 				Read More
 			</Link>
 			<hr className='w-[60%] my-8 ' />
-			<p className='w-[30rem] font-roboto text-gray-400 text-base text-justify italic '>
+			<p className='sm:w-[30rem] font-roboto text-gray-400 text-base text-justify italic '>
 				Tags: {post?.tags && post.tags.map((tag) => ' #' + tag)}
 			</p>
-			<hr className='w-[60%] my-8 ' />
+			<hr className='sm:w-[60%] my-8 ' />
 			{post?.creator && (
-				<div className='w-[30rem] flex flex-row'>
+				<div className='sm:w-[30rem] flex flex-row'>
 					<div className='w-1/3 flex flex-col items-center gap-3'>
 						<Image
 							className='rounded-full'

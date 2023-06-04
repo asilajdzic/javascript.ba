@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 
 import PostListItem from './PostListItem';
@@ -9,10 +7,7 @@ const MostViewedPosts = () => {
 
 	useEffect(() => {
 		const fetchMostViewedPosts = async () => {
-			const timestamp = Date.now(); // Generate a timestamp
-			const url = `/api/posts/most-viewed-posts?timestamp=${timestamp}`; // Append the timestamp as a query parameter
-
-			const response = await fetch(url, { cache: 'no-cache' }); // Add cache: 'no-cache' option to the fetch request
+			const response = await fetch('/api/posts/most-viewed-posts');
 			const data = await response.json();
 			setMostViewedPosts(data);
 		};

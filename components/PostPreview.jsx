@@ -10,7 +10,7 @@ const PostPreview = ({ post }) => {
 	});
 
 	return (
-		<section className='w-full flex flex-col items-center my-8'>
+		<section className='w-full max-w-screen flex flex-col items-center my-8'>
 			<h1 className='font-roboto w-[30rem] text-gray-800 font-semibold text-xl text-center'>
 				{post.heading}
 			</h1>
